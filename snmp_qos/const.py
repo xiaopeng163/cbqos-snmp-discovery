@@ -1,0 +1,2 @@
+SNMP_VERSION_2C = '2c'
+SNMP_VERSION_3 = '3'

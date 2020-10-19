@@ -1,0 +1,117 @@
+[
+    {
+        "policy_index": "1859430819",
+        "direction": "output",
+        "interface": {
+            "name": "GigabitEthernet0/0/0/0",
+            "description": "interface for demo"
+        },
+        "qos_obj": {
+            "obj_index": "630242763",
+            "obj_type": "policymap",
+            "cfg_index": "1837429039",
+            "cfg": {
+                "name": "cbqos-demo"
+            },
+            "children": [
+                {
+                    "obj_index": "1141124091",
+                    "obj_type": "classmap",
+                    "cfg_index": "454473802",
+                    "cfg": {
+                        "name": "cls-voice"
+                    },
+                    "children": [
+                        {
+                            "obj_index": "1301611659",
+                            "obj_type": "queueing",
+                            "cfg_index": "1258776011",
+                            "cfg": null,
+                            "children": []
+                        },
+                        {
+                            "obj_index": "1926879201",
+                            "obj_type": "matchStatement",
+                            "cfg_index": "1450737315",
+                            "cfg": {
+                                "name": "ip dscp 46"
+                            },
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "obj_index": "1192737166",
+                    "obj_type": "classmap",
+                    "cfg_index": "1965376995",
+                    "cfg": {
+                        "name": "class-default"
+                    },
+                    "children": [
+                        {
+                            "obj_index": "1363177068",
+                            "obj_type": "matchStatement",
+                            "cfg_index": "1924497808",
+                            "cfg": {
+                                "name": "any"
+                            },
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "obj_index": "1333719002",
+                    "obj_type": "classmap",
+                    "cfg_index": "378153061",
+                    "cfg": {
+                        "name": "cls-video"
+                    },
+                    "children": [
+                        {
+                            "obj_index": "1420093757",
+                            "obj_type": "queueing",
+                            "cfg_index": "794810792",
+                            "cfg": null,
+                            "children": []
+                        },
+                        {
+                            "obj_index": "1241579713",
+                            "obj_type": "matchStatement",
+                            "cfg_index": "22043352",
+                            "cfg": {
+                                "name": "ip dscp 34 36 38"
+                            },
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "obj_index": "1657844269",
+                    "obj_type": "classmap",
+                    "cfg_index": "837400410",
+                    "cfg": {
+                        "name": "cls-network-control"
+                    },
+                    "children": [
+                        {
+                            "obj_index": "1323718058",
+                            "obj_type": "matchStatement",
+                            "cfg_index": "1557935840",
+                            "cfg": {
+                                "name": "ip dscp 48 56"
+                            },
+                            "children": []
+                        },
+                        {
+                            "obj_index": "1259532151",
+                            "obj_type": "queueing",
+                            "cfg_index": "390223201",
+                            "cfg": null,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+]

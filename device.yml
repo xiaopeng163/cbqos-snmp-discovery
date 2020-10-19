@@ -1,0 +1,4 @@
+community: your_snmp_community
+
+inventory_list:
+  - xr1.cisco.com
